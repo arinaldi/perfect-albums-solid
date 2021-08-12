@@ -53,10 +53,10 @@ export const CheckIcon: Component = () => (
   </svg>
 );
 
-export const CloseIcon: Component<Props> = ({ className = '' }) => (
+export const CloseIcon: Component<Props> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class={className}
+    class={props.className || ''}
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -105,10 +105,10 @@ export const EditIcon: Component = () => (
   </svg>
 );
 
-export const MenuIcon: Component<Props> = ({ className = '' }) => (
+export const MenuIcon: Component<Props> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class={className}
+    class={props.className || ''}
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"

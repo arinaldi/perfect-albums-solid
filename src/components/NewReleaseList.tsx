@@ -7,12 +7,12 @@ interface Props {
   date: string;
 }
 
-const NewReleaseList: Component<Props> = ({ data, date }) => {
+const NewReleaseList: Component<Props> = (props) => {
   return (
     <div>
-      <h4 class="text-xl font-semibold dark:text-white">{date}</h4>
-      <ul data-testid={`list-${date}`} class="list-disc ml-6 p-1">
-        <For each={data}>
+      <h4 class="text-xl font-semibold dark:text-white">{props.date}</h4>
+      <ul data-testid={`list-${props.date}`} class="list-disc ml-6 p-1">
+        <For each={props.data}>
           {({ artist, title }) => (
             <li class="dark:text-white">
               <span>

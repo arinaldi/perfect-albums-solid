@@ -5,13 +5,13 @@ interface Props {
   onClick: () => void;
 }
 
-const Button: Component<Props> = ({ children, onClick }) => {
+const Button: Component<Props> = (props) => {
   return (
     <button
       class="py-2 px-4 border border-transparent text-sm font-bold rounded-md text-white bg-gray-700 hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-      onclick={onClick}
+      onclick={props.onClick}
     >
-      {children}
+      {props.children}
     </button>
   );
 };
